@@ -1,4 +1,4 @@
-package Lekcja;
+package Lekcja.trycatch;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

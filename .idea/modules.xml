@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Wyjątki(trycatch).iml" filepath="$PROJECT_DIR$/Wyjątki(trycatch).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Wyjątki.iml" filepath="$PROJECT_DIR$/Wyjątki.iml" />
     </modules>
   </component>
 </project>
