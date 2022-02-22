@@ -15,10 +15,11 @@ public class Calculator {
 
     public void calc() {
         boolean error = true;
-        do {
+        while (error) {
             try {
                 printText("Wybierz pierwszą liczbę");
                 double a = sc.nextDouble();
+                sc.nextLine();
                 printText("Wybierz drugą liczbę");
                 double b = sc.nextDouble();
                 sc.nextLine();
@@ -38,11 +39,17 @@ public class Calculator {
                     default -> throw new UnknownOperatorException("Niewłaściwie wprowadzona operacja");
                 }
                 printText("wynik działania: " + option + " to: " + result);
-
+                error = false;
             } catch (InputMismatchException ex) {
                 System.err.println("Niewłaściwie wprowadzona liczba");
+                sc.nextLine();
+            } catch (UnknownOperatorException ex) {
+                printText(ex.getMessage());
+                sc.nextLine();
+            } catch (ArithmeticException exception) {
+                printText(exception.getMessage());
             }
-        } while (error);
+        }
     }
 
 
